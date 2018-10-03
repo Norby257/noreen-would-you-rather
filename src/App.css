@@ -26,3 +26,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.LogIn {
+ border: 1px 1 px 1px 1px solid black;
+
+}
