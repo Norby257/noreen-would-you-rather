@@ -8,7 +8,7 @@ function LogIn(props) {
         
         <h3 className="center"> Welcome to would you rather! Choose a user to sign in </h3>
         <form>
-        <label for="user-select"> Choose a User: </label>
+        <label htmlFor="user-select"> Choose a User: </label>
         <select id ="user-select">
         <option value="tyler-mcGinnis">Tyler McGinnis</option>
       <option value="sarah-edo">Sarah Edo</option>
