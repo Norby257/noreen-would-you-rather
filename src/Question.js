@@ -34,7 +34,8 @@ class Question extends React.Component {
             {...formItemLayout}
           >
             <Radio.Group defaultValue="horizontal" onChange={this.handleFormLayoutChange}>
-             
+              <Radio.Button value="horizontal">Horizontal</Radio.Button>
+              <Radio.Button value="vertical">Vertical</Radio.Button>
               <Radio.Button value="inline">Inline</Radio.Button>
             </Radio.Group>
           </FormItem>
