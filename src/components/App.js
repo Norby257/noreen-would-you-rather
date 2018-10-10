@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import LogIn from './LogIn'
+import UserProfile from './UserProfile'
 import Question from './Question'
 import NewQuestion from './NewQuestion'
 import Navigation from './Navigation'
@@ -12,6 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
+        <UserProfile />
     
          {/* <LogIn />
         <Question />
