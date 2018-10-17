@@ -7,6 +7,8 @@ import NewQuestion from './NewQuestion'
 import Navigation from './Navigation'
 import SelectUser from './SelectUser'
 
+import {Route} from 'react-router-dom';
+
 
 class App extends Component {
   render() {
@@ -14,8 +16,8 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <UserProfile />
-        <SelectUser />
-    
+        
+      
          {/* <LogIn />
         <Question />
         <NewQuestion /> */} 
