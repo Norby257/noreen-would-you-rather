@@ -3,12 +3,9 @@
 //   list of users somewhere so user can select one 
 //  google how to make box in CSS and in react 
 import User from './User';
-import React, {Component} from 'react';
+import React from 'react';
 
 class SelectUser extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     //  lifecycle methods here 
 
