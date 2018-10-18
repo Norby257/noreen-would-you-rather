@@ -15,7 +15,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-        <UserProfile />
+        {/* <UserProfile /> */}
+        <SelectUser />
         
       
          {/* <LogIn />
