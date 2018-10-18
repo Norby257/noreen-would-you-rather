@@ -20,7 +20,6 @@ class SelectUser extends React.Component {
                 <div className="container">
             <h1>Would you Rather?</h1>
             <p>Music Festival Edition - which headliner do you see?</p>
-            <p><a className="btn btn-primary btn-lg" href="#" role="button">Sign in</a></p>
             </div>
           </div>
         )
