@@ -12,29 +12,32 @@ import React, { Component } from "react"
      // 3) allow submission 
 
      // displaying component to the screen 
+     //  the frontend of this is going to be  a bootstrap thumbnail 
+     //  containing radio buttons
 
      render() {
          // other vars and dispatch go here 
 
          // actual content on screen
         return (
-            <div>
-            <h3 className="center">Submit a dilemma!  </h3>
-            <form className="new-tweet" onSubmit={this.handleSubmit}>
-           <textarea 
-                placeholder="Choice 1 "
-                // value={text}
-                // onChange={this.handleChange}
+            <div className="row">
+            <div className="col-sm-6 col-md-4">
+              <div className="thumbnail">
              
-                />
-             
+                <div className="caption">
+                  <h3>Send in your dilemma! </h3>
+                  <input type="radio" /><input type="text" placeholder= "Difficult option 1 "/>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 
-                <button className='btn'>
+                  <div> </div>
+                  <input type="radio" /><input type="text" placeholder= "Difficult option 1 "/>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+
+
                
-                SEND IN YOUR DILEMMA
-                 </button>
-            </form>
-        </div>
+                  <p><a href="#" className="btn btn-primary" role="button">Submit your Question!</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
         )
      }
  }
