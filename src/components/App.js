@@ -21,9 +21,9 @@ class App extends Component {
     
         
       
-         {/* <LogIn />
-        <Question />
-        <NewQuestion /> */} 
+    
+   
+      <NewQuestion /> 
       </div>
     );
   }
