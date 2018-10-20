@@ -22,6 +22,12 @@ export function getInitialData() {
 }
 
 //  export function that saves questions
+export function _saveQuestion() {
+    return _saveQuestion()
+}
 
 
 //  export function that saves question answers 
+export function saveQuestionAnswer() {
+    return _saveQuestionAnswer()
+}
