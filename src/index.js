@@ -7,9 +7,11 @@ import registerServiceWorker from './registerServiceWorker';
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import reducer from './reducers'
+import middleware from './middleware'
 
 //   call createStore and pass the root reducer
-const store = createStore(reducer)
+//   pass middleware as second arg to createStore
+const store = createStore(reducer, middleware)
 //   wrap main app component in provider component and pass store as prop  
 ReactDOM.render(
 <Provider store={store}>
