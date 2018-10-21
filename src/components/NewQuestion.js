@@ -29,10 +29,7 @@ import React, { Component } from "react"
                   <input type="radio" /><input type="text" placeholder= "Difficult option 1 "/>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 
                   <div> </div>
-                  <input type="radio" /><input type="text" placeholder= "Difficult option 1 "/>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-
-
-               
+                  <input type="radio" /><input type="text" placeholder= "Difficult option 2 "/>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​               
                   <p><a href="#" className="btn btn-primary" role="button">Submit your Question!</a></p>
                 </div>
               </div>

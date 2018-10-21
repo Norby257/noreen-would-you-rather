@@ -4,7 +4,7 @@ import {receiveQuestions} from '../actions/questions'
 import {setAuthedUser} from '../actions/authedUser'
 
 //   hardcoding this value for now but this will be changed 
-const AUTHED_ID = tylermcginnis
+const AUTHED_ID = 'tylermcginnis'
 //   use redux thunk pattern to make async request
 export function handleInitialData() {
     return (dispatch) => {
@@ -19,3 +19,4 @@ export function handleInitialData() {
     }
 
 }
+
