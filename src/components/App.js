@@ -31,12 +31,6 @@ class App extends Component {
           ? null
           :  <QuestionsDashboard />}
           </div>
-       
-    
-        
-      
-    
-   
       <NewQuestion /> 
       </div>
     );
