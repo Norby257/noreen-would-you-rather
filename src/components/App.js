@@ -7,6 +7,7 @@ import NewQuestion from './NewQuestion'
 import Navigation from './Navigation'
 import SelectUser from './SelectUser'
 import LoginThumbail from './LoginThumbnail';
+import QuestionsDashboard from './QuestionsDashboard'
 import {Route} from 'react-router-dom';
 import {connect} from 'react-redux'
 import {handleInitialData} from '../actions/shared'
@@ -25,15 +26,21 @@ class App extends Component {
         {/* <UserProfile /> */}
         <SelectUser />
         <LoginThumbail />
-    
-        
-      
-    
-   
+        <div>
+          {this.props.loading === true
+          ? null
+          :  <QuestionsDashboard />}
+          </div>
       <NewQuestion /> 
       </div>
     );
   }
 }
-//   
-export default connect() (App);
+
+
+function mapStateToProps ({authedUser}) {
+  return {
+    loading: authedUser === null
+  }
+}
+export default connect(mapStateToProps) (App);
