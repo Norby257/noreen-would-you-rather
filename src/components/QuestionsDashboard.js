@@ -10,7 +10,7 @@ class QuestionsDashboard extends Component {
                 <ul className='dashboard-list'>
                 {this.props.QuestionIds.map((id)=> (
                     <li key={id}>
-                        <Question id ={id} />
+                        <Question id ={id}  />
                     </li>
 
                 ))}
