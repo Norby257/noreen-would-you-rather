@@ -1,63 +1,24 @@
-//   radio button and submit button 
-//  form
-import React, {Component} from 'react'
-import {Form, Input, Button, Radio} from 'antd';
+import React, {Component} from 'react' 
+import {connect} from 'react-redux'
 
-const FormItem = Form.Item;
-
-class Question extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      formLayout: 'vertical',
-    };
-  }
-
-  handleFormLayoutChange = (e) => {
-    this.setState({ formLayout: e.target.value });
-  }
-
+class Question extends Component {
   render() {
-    const { formLayout } = this.state;
-    const formItemLayout = formLayout === 'horizontal' ? {
-      labelCol: { span: 4 },
-      wrapperCol: { span: 14 },
-    } : null;
-    const buttonItemLayout = formLayout === 'horizontal' ? {
-      wrapperCol: { span: 14, offset: 4 },
-    } : null;
+    console.log(this.props)
     return (
-      <div>
-        <Form layout={formLayout}>
-          <FormItem
-            label="Form Layout"
-            {...formItemLayout}
-          >
-            <Radio.Group defaultValue="horizontal" onChange={this.handleFormLayoutChange}>
-              <Radio.Button value="horizontal">Horizontal</Radio.Button>
-              <Radio.Button value="vertical">Vertical</Radio.Button>
-              <Radio.Button value="inline">Inline</Radio.Button>
-            </Radio.Group>
-          </FormItem>
-          <FormItem
-            label="Option 1"
-            {...formItemLayout}
-          >
-            <Input placeholder="input placeholder"/>
-          </FormItem>
-          <FormItem
-            label="Option 2"
-            {...formItemLayout}
-          >
-            <Input placeholder="input placeholder" />
-          </FormItem>
-          <FormItem {...buttonItemLayout}>
-            <Button type="primary">Submit</Button>
-          </FormItem>
-        </Form>
-      </div>
-    );
+      <div className='question'>
+      </div> 
+    )
   }
 }
 
-export default Question;
+//   whenever we connect a component to redux state 
+//   do we need to format question 
+function mapStateToProps({authedUser, users, questions}, {id}) {
+  const question = questions[id]
+  return {
+    authedUser,
+    questions
+    
+  }
+}
+export default connect(mapStateToProps)(Question)
