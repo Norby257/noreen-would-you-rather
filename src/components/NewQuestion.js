@@ -42,6 +42,8 @@ import React, { Component } from "react"
          const {text} = this.state
 
          // actual content on screen
+         //  updaate state of store wiht new question 
+         //  build a few actions 
         return (
             <div className="row">
             <div className="col-sm-6 col-md-4">
