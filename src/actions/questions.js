@@ -1,8 +1,8 @@
 import {saveQuestionAnswer} from '../utils/api'
-export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 import {saveQuestion} from '../utils/api'
+export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 export const RECEIVE_QUESTION_ANSWER = 'RECEIVE_QUESTION_ANSWER'
-export ocnst ADD_QUESTION = 'ADD_QUESTION'
+export const ADD_QUESTION = 'ADD_QUESTION'
 //   loadnig bar would be nice 
 
 export function receiveQuestions(questions) {
