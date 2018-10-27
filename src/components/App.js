@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 import UserProfile from './UserProfile'
@@ -8,7 +9,6 @@ import Navigation from './Navigation'
 import SelectUser from './SelectUser'
 import LoginThumbail from './LoginThumbnail';
 import QuestionsDashboard from './QuestionsDashboard'
-import {Route} from 'react-router-dom';
 import {connect} from 'react-redux'
 import {handleInitialData} from '../actions/shared'
 
@@ -22,16 +22,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
-        {/* <UserProfile /> */}
-        <SelectUser />
-        <LoginThumbail />
+      <Navigation />
+      <Router> 
+          <Fragment >
+        <div>
+          loading bar here 
+        </div>
         <div>
           {this.props.loading === true
           ? null
-          :  <QuestionsDashboard />}
-          </div>
-      <NewQuestion /> 
+          : <div>
+          <Route path='/' exact component={QuestionsDashboard} />
+          <Route path ='/:id' exact component={Question} />
+          <Route path ='/new' exact component={NewQuestion} />
+          </div>}
+          </div>          
+          </Fragment>
+      </Router>
+
+     
       </div>
     );
   }
