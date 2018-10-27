@@ -1,4 +1,4 @@
-import {RECEIVE_QUESTIONS, RECEIVE_QUESTION_ANSWER} from '../actions/questions'
+import {RECEIVE_QUESTIONS, RECEIVE_QUESTION_ANSWER, ADD_QUESTION} from '../actions/questions'
 //   import function here 
 //   determine algorithm for keeping track of who voted for what 
 //  and then come back and do this 
@@ -19,6 +19,15 @@ export default function questions (state = {}, action) {
                     ? state[action.id].votes.filter((uid)=> uid !== action.authedUser)
                     : state[action.id].votes.concat([action.authedUser])
                 }
+            }
+        case ADD_QUESTION: 
+            const { question} = action 
+            return {
+                ...state,
+                [action.question.id]: action.question
+                //   whenever we have new question, add it to questions array 
+                
+                //  logic for vtes array go here 
             }
             default: 
                 return state
