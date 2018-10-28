@@ -22,12 +22,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Navigation />
       <Router> 
           <Fragment >
         <div>
           loading bar here 
         </div>
+        <Navigation />
+
         <div>
           {this.props.loading === true
           ? null
