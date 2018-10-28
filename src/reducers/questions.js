@@ -24,10 +24,13 @@ export default function questions (state = {}, action) {
             const { question} = action 
             return {
                 ...state,
-                [action.question.id]: action.question
+                [action.question.id]: action.question,
                 //   whenever we have new question, add it to questions array 
                 
-                //  logic for vtes array go here 
+                //  logic for votes array go here 
+                //   may have to spread votes / answers 
+                //   check _DATA.js before proceeding 
+                
             }
             default: 
                 return state

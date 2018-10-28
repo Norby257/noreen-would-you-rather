@@ -1,11 +1,12 @@
 import React, {Component} from 'react' 
 import {connect} from 'react-redux'
-import {handleReceiveQuestionAnswer} from '../actions/questions' 
+import {handleReceiveQuestionAnswer} from '../actions/questions'
+ import {Link, withRouter} from 'react-router-dom'
 class Question extends Component {
   handleVote = (e) => {
     e.preventDefault()
 
-    const {dispatch, question, authedUser} = this.props 
+    const {dispatch, question, authedUser, id} = this.props 
 
     dispatch(handleReceiveQuestionAnswer({
       id: question.id, 
@@ -34,4 +35,4 @@ function mapStateToProps({authedUser, users, questions}, {id}) {
     
   }
 }
-export default connect(mapStateToProps)(Question)
+export default withRouter (connect(mapStateToProps)(Question))

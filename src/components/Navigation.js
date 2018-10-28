@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {NavLink} from 'react-router-dom'
 const Navigation = () => {
     return (
         <nav className="navbar navbar-inverse">
@@ -16,8 +16,17 @@ const Navigation = () => {
       
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="#">Festival Information <span className="sr-only">(current)</span></a></li>
-              <li><a href="#">Daily Line-Up</a></li>
+              <li className="active"><NavLink to='/' exact activeClassName='active'>Home 
+              </NavLink> 
+              <span className="sr-only">(current)
+              </span>
+             
+              </li>
+              <li>
+                <NavLink to='/new' activeClassName='active'>
+                New Question 
+                </NavLink>
+              </li>
            
             </ul>
           

@@ -1,9 +1,12 @@
 import React, { Component } from "react"
-
+import {connect} from 'react-redux'
+import {handleAddQuestion} from '../actions/questions'
+import {Redirect} from 'react-router-dom'
  class NewQuestion extends Component {
    //  this is a controlled component 
      state = {
          text: '',
+         toHome: false,
      }
 
      //  methods here ; also, may have to include more info in the state
@@ -39,7 +42,11 @@ import React, { Component } from "react"
 
      render() {
          // other vars and dispatch go here 
-         const {text} = this.state
+         const {text, toHome} = this.state
+
+         if (toHome === true) {
+           return <Redirect to='/' />
+         }
 
          // actual content on screen
          //  updaate state of store wiht new question 
