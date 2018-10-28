@@ -34,8 +34,8 @@ class App extends Component {
           {this.props.loading === true
           ? null
           : <div>
-          <Route path='/' exact component={QuestionsDashboard} />
-          <Route path ='/:id' exact component={Question} />
+          <Route path='/' exact component={QuestionsDashboard} tile={"would you rather"} />
+          <Route path ='/:id' exact component={Question}  title={"would you rather"} />
           <Route path ='/new' exact component={NewQuestion} />
           </div>}
           </div>          

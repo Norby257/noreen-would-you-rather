@@ -1,7 +1,5 @@
 import {RECEIVE_QUESTIONS, RECEIVE_QUESTION_ANSWER, ADD_QUESTION} from '../actions/questions'
-//   import function here 
-//   determine algorithm for keeping track of who voted for what 
-//  and then come back and do this 
+
 
 export default function questions (state = {}, action) {
     switch(action.type) {
@@ -17,6 +15,9 @@ export default function questions (state = {}, action) {
                     ...state[action.id],
                     votes: action.hasVoted === true 
                     ? state[action.id].votes.filter((uid)=> uid !== action.authedUser)
+                    //   so for votes we ae getting the authedUser that voted 
+                    //   and appending that as integer for adding to votes array(concat)
+
                     : state[action.id].votes.concat([action.authedUser])
                 }
             }
