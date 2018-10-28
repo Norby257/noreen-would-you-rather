@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import LoadingBar from 'react-redux-loading'
 import logo from './logo.svg';
 import './App.css';
 import UserProfile from './UserProfile'
@@ -22,14 +23,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+     
       <Router> 
           <Fragment >
-        <div>
-          loading bar here 
-        </div>
+       
         <Navigation />
 
         <div>
+        <LoadingBar /> 
           {this.props.loading === true
           ? null
           : <div>
