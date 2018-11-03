@@ -57,7 +57,7 @@ import {Redirect} from 'react-router-dom'
               <div className="thumbnail">
              
                 <div className="caption">
-                  <h3>Send in your dilemma! </h3>
+                  <h3>Would you rather? </h3>
                   <form onSubmit = {this.handleSubmit}>
                   <input type="radio" /><input type="text" placeholder= "Difficult option 1 " value={text}
                   onChange={this.handleChange}/>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

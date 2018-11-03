@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Question from './Question'
+
+//   TODO: map over each question and display it 
 class QuestionsDashboard extends Component {
     render() {
         
