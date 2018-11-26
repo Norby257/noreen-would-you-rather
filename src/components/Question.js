@@ -19,6 +19,7 @@ class Question extends Component {
     console.log(this.props)
     return (
       <div className='question'>
+        <h1> {this.props.title} </h1>
       </div> 
     )
   }
